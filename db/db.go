@@ -30,7 +30,6 @@ func StartDB() (*pg.DB, error) {
 	}
 
 	db := pg.Connect(opts)
-	_ = db
 
 	collection := migrations.NewCollection()
 	err = collection.DiscoverSQLMigrations("migrations")
